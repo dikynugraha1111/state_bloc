@@ -3,21 +3,34 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:try_bloc/meet_1/ui/home.dart';
 import 'package:try_bloc/meet_2/state/counter_bloc.dart';
 import 'package:try_bloc/meet_3/state/counter_bloc.dart';
+import 'package:try_bloc/meet_4/state/counter_bloc.dart';
+import 'package:try_bloc/meet_4/ui/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  final ThemeData light = ThemeData.light();
+  final ThemeData dark = ThemeData.dark();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BlocProvider(
-        create: (context) => CounterBloc3(0),
-        child: const HomeMeet1(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CounterBloc4(),
+        )
+      ],
+      child: BlocBuilder<CounterBloc4, int>(
+        builder: (context, state) {
+          return MaterialApp(
+            theme: context.read<CounterBloc4>().light ? light : dark,
+            home: const HomeMeet4(),
+          );
+        },
       ),
     );
   }
