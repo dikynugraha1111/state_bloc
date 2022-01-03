@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:try_bloc/meet_1/ui/home.dart';
 import 'package:try_bloc/meet_2/state/counter_bloc.dart';
+import 'package:try_bloc/meet_3/state/counter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: BlocProvider(
-        create: (context) => CounterBloc2(),
+        create: (context) => CounterBloc3(0),
         child: const HomeMeet1(),
       ),
     );
