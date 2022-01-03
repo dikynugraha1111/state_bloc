@@ -8,3 +8,9 @@ In this course will learn about the basics of state bloc in flutter. Please go t
 
 - [home](https://github.com/dikynugraha1111/state_bloc/tree/master/lib)</br>
   Noted, the beginning of the application structure. Mandatory **READ**
+- [meet1](https://github.com/dikynugraha1111/state_bloc/tree/master/meet_1)</br>
+  Fundamental of BloC. Made without flutter_bloc plugin
+- [meet2](https://github.com/dikynugraha1111/state_bloc/tree/master/meet_2)</br>
+  Implement Bloc with Flutter_bloc plugin.
+- [meet3](https://github.com/dikynugraha1111/state_bloc/tree/master/meet_3)</br>
+  Try Cubit, part of BloC
