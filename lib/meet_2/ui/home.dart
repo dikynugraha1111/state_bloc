@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:try_bloc/meet_2/state/counter_bloc.dart';
 
@@ -9,6 +8,12 @@ class HomeMeet2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var blocCounter = BlocProvider.of<CounterBloc2>(context);
+    // Untuk BlocProvider.of dengan params listen false bisa menggunakan context.read
+    // ----------------------------------------------------------------------------
+    // Untuk BlocProvider.of dengan params listen true bisa menggunakan context.watch
+    // Perlu diperhatikan menggunakan context.watch artinya dipantau setiap saat
+    // Widget akan selalu di build ulang.
+    // Kegunaanya adalah ketika di build kita ada child widget yang beda classnya/ pisah dengan build utama
 
     return Scaffold(
       appBar: AppBar(
