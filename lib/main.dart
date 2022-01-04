@@ -7,6 +7,7 @@ import 'package:try_bloc/meet_4/state/counter_bloc.dart';
 import 'package:try_bloc/meet_4/ui/home.dart';
 import 'package:try_bloc/meet_5/state/counter_bloc.dart';
 import 'package:try_bloc/meet_5/ui/home.dart';
+import 'package:try_bloc/meet_6/state/counter_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CounterBloc5(),
+        ),
+        BlocProvider(
+          create: (context) => CounterBloc6(),
         ),
         BlocProvider(
           create: (context) => Mode(),

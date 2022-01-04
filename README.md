@@ -18,3 +18,5 @@ In this course will learn about the basics of state bloc in flutter. Please go t
   MultiBloc Provider
 - [meet5](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_5)</br>
   BloC Listener
+- [meet6](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_6)</br>
+  BloC Consumer
