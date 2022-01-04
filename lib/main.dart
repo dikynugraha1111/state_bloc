@@ -5,6 +5,8 @@ import 'package:try_bloc/meet_2/state/counter_bloc.dart';
 import 'package:try_bloc/meet_3/state/counter_bloc.dart';
 import 'package:try_bloc/meet_4/state/counter_bloc.dart';
 import 'package:try_bloc/meet_4/ui/home.dart';
+import 'package:try_bloc/meet_5/state/counter_bloc.dart';
+import 'package:try_bloc/meet_5/ui/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,13 +24,19 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => CounterBloc4(),
+        ),
+        BlocProvider(
+          create: (context) => CounterBloc5(),
+        ),
+        BlocProvider(
+          create: (context) => Mode(),
         )
       ],
-      child: BlocBuilder<CounterBloc4, int>(
+      child: BlocBuilder<CounterBloc5, int>(
         builder: (context, state) {
           return MaterialApp(
-            theme: context.read<CounterBloc4>().light ? light : dark,
-            home: const HomeMeet4(),
+            theme: context.watch<CounterBloc5>().light ? light : dark,
+            home: const HomeMeet5(),
           );
         },
       ),
