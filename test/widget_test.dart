@@ -9,8 +9,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:try_bloc/main.dart';
+import 'package:try_bloc/meet_7/model/user.dart';
+import 'package:equatable/equatable.dart';
 
 void main() {
+  test(
+    "Test of Equatable class Users",
+    () {
+      User user1 = User(name: "Diky", age: 21);
+
+      if (user1.name!.isEmpty) {
+        print("true");
+        return true;
+      } else {
+        print("false");
+        return false;
+      }
+    },
+  );
+
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());

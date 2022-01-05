@@ -13,10 +13,12 @@ In this course will learn about the basics of state bloc in flutter. Please go t
 - [meet2](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_2)</br>
   Implement Bloc with Flutter_bloc plugin.
 - [meet3](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_3)</br>
-  Try Cubit, part of BloC
+  Try Cubit, part of BloC (More simplefy BloC, part of BloC)
 - [meet4](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_4)</br>
-  MultiBloc Provider
+  MultiBloc Provider (Declare more BloC class in Main)
 - [meet5](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_5)</br>
-  BloC Listener
+  BloC Listener (To listen change of view/code, sometimes used in state)
 - [meet6](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_6)</br>
-  BloC Consumer
+  BloC Consumer (Merge Listener and builder of BloC with one code/ function)
+- [meet7](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_7)</br>
+  Equatable(To comparisons object, used in Testing class)
