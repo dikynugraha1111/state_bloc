@@ -22,3 +22,5 @@ In this course will learn about the basics of state bloc in flutter. Please go t
   BloC Consumer (Merge Listener and builder of BloC with one code/ function)
 - [meet7](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_7)</br>
   Equatable(To comparisons object, used in Testing class)
+- [meet8](https://github.com/dikynugraha1111/state_bloc/tree/master/lib/meet_8)</br>
+  Try bloc/cubit test - 1

@@ -7,12 +7,41 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:bloc_test/bloc_test.dart';
 import 'package:try_bloc/main.dart';
 import 'package:try_bloc/meet_7/model/user.dart';
 import 'package:equatable/equatable.dart';
+import 'package:try_bloc/meet_8/state/cubit/user_cubit.dart';
 
 void main() {
+  group(
+    "Test User Cubit",
+    () {
+      blocTest(
+        "On Init",
+        build: () => UserCubit(),
+        act: (UserCubit stateCube) {
+          stateCube.onInit();
+        },
+        expect: () => [
+          const UserState(),
+        ],
+      );
+      blocTest(
+        "On load",
+        build: () => UserCubit(),
+        act: (UserCubit userCubit) {
+          userCubit.onLoad();
+        },
+        expect: () => [
+          const UserState(
+            stateStatus: UserStatus.loaded,
+          )
+        ],
+      );
+    },
+  );
+
   test(
     "Test of Equatable class Users",
     () {
